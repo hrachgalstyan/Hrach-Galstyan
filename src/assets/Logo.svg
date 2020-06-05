@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.52 32.52" width="60px" height="60px">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: none;
+                stroke: #fff;
+                stroke-miterlimit: 10;
+            }
+
+            .cls-2 {
+                font-size: 9.62px;
+                fill: #fff;
+                font-family: MyriadPro-Regular, Myriad Pro;
+            }
+        </style>
+    </defs>
+    <title>Logo</title>
+    <rect class="cls-1" x="39" y="39" width="21.99" height="21.99" transform="translate(-54.45 16.26) rotate(-45)" />
+    <line class="cls-1" x1="13.04" y1="19.48" x2="19.48" y2="13.04" /><text class="cls-2"
+        transform="translate(9.1 15.27)">H</text><text class="cls-2" transform="translate(16.85 22.8)">G</text>
+</svg>
