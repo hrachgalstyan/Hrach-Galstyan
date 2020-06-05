@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
     GoogleMap,
     useLoadScript,
@@ -6,6 +6,8 @@ import {
     InfoWindow,
 } from "@react-google-maps/api";
 import mapStyles from './mapStyles'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const mapContainerStyle = {
     height: "80vh",
@@ -29,12 +31,13 @@ const options = {
 
 export default function Map() {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: "AIzaSyChnzJh5EqmIKYd4eVOA-6jTj3oAbjSHUI",
+        googleMapsApiKey: (`${process.env.REACT_APP_GOOGLE_API_KEY}`),
     });
     if (loadError) return "Error";
     if (!isLoaded) return "Loading...";
+    AOS.init({});
     return (
-        <div>
+        <div data-aos="fade-up">
             <GoogleMap 
                 mapContainerStyle={mapContainerStyle}
                 zoom={2.4}

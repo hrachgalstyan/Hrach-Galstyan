@@ -3,6 +3,8 @@
 :root{
     --mainBg: rgb(112, 112, 112);
     --mainWhite: #fff;
+    --mainTransition: 0.3s all ease-in-out;
+    --mainBlack: #000;
 }
 
 *{
@@ -166,14 +168,42 @@ a{
 }
 
 
+.scroll-btn {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background: rgba(18, 18, 18, 1);
+    color: var(--mainWhite);
+    z-index: -100;
+    opacity: 0;
+    transition: var(--mainTransition);
+    font-size: 2.5rem;
+    line-height: 0;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+}
+.scroll-btn::after, .scroll-btn::before, .scroll-btn:focus{
+    text-decoration: none;
+    outline: none;
+}
+
+.show-scroll-btn {
+    z-index: 100;
+    opacity: 1;
+}
+
+
 /* Mouse scroll */
+
+.mouse-bg{
+    position: absolute;
+    bottom: 5vh;
+}
 
 .mouse{
     width: 30px;
     height: 50px;
     border: 1px solid var(--mainWhite);
-    position: absolute;
-    bottom: 5vh;
     margin: 0 auto;
     border-radius: 20px;
 }

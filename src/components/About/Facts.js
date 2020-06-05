@@ -6,9 +6,7 @@ import 'aos/dist/aos.css';
 
 export default function Facts() {
     useEffect(() => {
-        AOS.init({
-            duration: 2000
-        })
+        AOS.init({})
     }, [])
     return (
         <>

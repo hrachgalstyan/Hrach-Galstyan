@@ -13,6 +13,7 @@ import Error from './pages/Error'
 // ********** Components ********** //
 import ScrollTop from './components/ScrollTop'
 import Header from './components/Header'
+import ScrollButton from './components/ScrollButton'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <ScrollTop>
             {/* ********** components *********** */}
             <Header />
+            <ScrollButton />
 
             {/* ********** Pages ********** */}
 

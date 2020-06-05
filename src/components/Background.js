@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Animated } from "react-animated-css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Background({title, children, none}) {
+    useEffect(() => {
+        AOS.init({})
+    }, [])
     return (
         <div className="background" style={{zIndex: 0}}>
             <div className="bglayer">
                 <div className="text-center">
-                        <Animated animationIn="fadeInDown" animationInDuration={1500} isVisible={true}>
-                            <div className="title">{title}</div>
-                        </Animated>
-                        <Animated animationIn="fadeInUp" animationInDuration={1500} isVisible={true}>
-                        {children}
-                        </Animated>
+                    <div data-aos="fade-down" className="title">{title}</div>
+                    {children}
                 </div>
-                {none ? <div></div> : <div className="mouse"></div>}
+                {none ? <div></div> : 
+                    <div className="d-flex justify-content-center mouse-bg">
+                        <div className="mouse"></div>
+                    </div>
+                }
             </div>
         </div>
     )
