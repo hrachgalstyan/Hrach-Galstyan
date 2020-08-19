@@ -317,6 +317,17 @@ a{
 .image{
     transition: 0.3s;
     z-index: 1;
+    max-width: 90%;
+    min-height: 200px;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .image{
+        height: 200px;
+        max-height: 200px;
+    }
 }
 
 .image:hover{

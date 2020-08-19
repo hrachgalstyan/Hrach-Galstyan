@@ -1,6 +1,5 @@
 import React from 'react'
 import CVImage from './CV.png'
-import printJS from 'print-js'
 
 export default function CV() {
     return (

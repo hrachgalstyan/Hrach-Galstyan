@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { TiArrowUpThick } from "react-icons/ti";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
